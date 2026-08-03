@@ -1,9 +1,38 @@
 
+import 'package:app/constant.dart';
 import 'package:app/core/utils/assets.dart';
+import 'package:app/features/home/presntation/views/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:get/state_manager.dart';
 
-class Splachviewbody extends StatelessWidget {
+class Splachviewbody extends StatefulWidget {
   const Splachviewbody({super.key});
+
+  @override
+  State<Splachviewbody> createState() => _SplachviewbodyState();
+}
+
+class _SplachviewbodyState extends State<Splachviewbody> {
+  @override
+  void initState() {
+   navigateToHome();
+    super.initState();
+  }
+
+  Future<Null> navigateToHome() {
+    return Future.delayed(const Duration(seconds: 2),(){
+      Get.to(()=>HomeView(),transition:Transition.fade,duration: kTransationDuration);
+
+  
+
+  });
+  }
+ 
+ 
+
+ @override
+  
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +41,12 @@ class Splachviewbody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(Assets.logo),
-        SizedBox(
+       const SizedBox(
           height: 4,
         ),
-        Text('Read Free books',textAlign: TextAlign.center,),
+        Text('Read Free Books',textAlign: TextAlign.center,)
+      
+
         
 
 
@@ -25,3 +56,4 @@ class Splachviewbody extends StatelessWidget {
     );
   }
 }
+
