@@ -12,6 +12,10 @@ class Splachviewbody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Image.asset(Assets.logo),
+        SizedBox(
+          height: 4,
+        ),
+        Text('Read Free books',textAlign: TextAlign.center,),
         
 
 
