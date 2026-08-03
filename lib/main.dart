@@ -1,3 +1,4 @@
+import 'package:app/constant.dart';
 import 'package:app/features/splash/presentation/views/splachview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -13,7 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home: Splachview(),
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
+      ),
+      home:const Splachview(),
     );
   }
 }
