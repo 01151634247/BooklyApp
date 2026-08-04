@@ -21,11 +21,45 @@ class homeViewBody extends StatelessWidget {
          const SizedBox(
           height: 40,
          ),
-         Text('Best Seller ',style: Styles.titlemedium,)
+         Text('Best Seller ',style: Styles.titlemedium,),
+         BestListViewItem(),
+
+
+        ],
+      ),
+    );
+  }
+}
+
+class BestListViewItem extends StatelessWidget {
+  const BestListViewItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 120,
+      child: Row(
+        children: [
+          AspectRatio(
+            aspectRatio: 2.4/4,
+            child: Container(
+             
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.red,
+                    
+                    image: DecorationImage(
+                      fit: BoxFit.fill,
+                      image:AssetImage(Assets.test),),
+            
+                  ),
+            
+               ),
+          ),
       
-         
       
         ],
+       
       ),
     );
   }
