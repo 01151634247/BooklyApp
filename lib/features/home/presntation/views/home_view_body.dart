@@ -1,9 +1,9 @@
 
+import 'package:app/constant.dart';
 import 'package:app/core/utils/assets.dart';
 import 'package:app/core/utils/styles.dart';
 import 'package:app/features/home/presntation/views/widgets/Featuerd_ListView_Item.dart';
 import 'package:app/features/home/presntation/views/widgets/custom_appbar.dart';
-import 'package:app/features/home/presntation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class homeViewBody extends StatelessWidget {
@@ -21,7 +21,9 @@ class homeViewBody extends StatelessWidget {
          const SizedBox(
           height: 40,
          ),
-         Text('Best Seller ',style: Styles.titlemedium,),
+         Text('Best Seller ',style: Styles.textstyle18.copyWith(
+          fontFamily: kGtSectraFine,
+         ),),
          BestListViewItem(),
 
 
