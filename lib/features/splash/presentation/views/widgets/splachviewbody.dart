@@ -1,10 +1,10 @@
 
 import 'package:app/constant.dart';
+import 'package:app/core/utils/approuter.dart';
 import 'package:app/core/utils/assets.dart';
 import 'package:app/features/home/presntation/views/home_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
-import 'package:get/state_manager.dart';
+import 'package:go_router/go_router.dart';
 
 class Splachviewbody extends StatefulWidget {
   const Splachviewbody({super.key});
@@ -22,7 +22,8 @@ class _SplachviewbodyState extends State<Splachviewbody> {
 
   Future<Null> navigateToHome() {
     return Future.delayed(const Duration(seconds: 2),(){
-      Get.to(()=>HomeView(),transition:Transition.fade,duration: kTransationDuration);
+    //  Get.to(()=>HomeView(),transition:Transition.fade,duration: kTransationDuration);
+    GoRouter.of(context).push(Approuter.kHomeView);
 
   
 
