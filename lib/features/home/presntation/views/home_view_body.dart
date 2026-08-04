@@ -24,6 +24,9 @@ class homeViewBody extends StatelessWidget {
          Text('Best Seller ',style: Styles.textstyle18.copyWith(
           fontFamily: kGtSectraFine,
          ),),
+         SizedBox(
+          height: 20,
+         ),
          BestListViewItem(),
 
 
@@ -58,6 +61,22 @@ class BestListViewItem extends StatelessWidget {
             
                ),
           ),
+          SizedBox(
+            width: 18,
+          ),
+
+          Column(
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width*.5,
+                child: Text('Harry Poter and the Goblet Of Fire Harry Poter and the Goblet Of Fire',
+                style:Styles.textstyle18,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                )),
+
+
+          ],)
       
       
         ],
