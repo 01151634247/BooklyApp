@@ -1,5 +1,7 @@
 
+import 'package:app/core/utils/styles.dart';
 import 'package:app/features/home/presntation/views/widgets/Featuerd_ListView_Item.dart';
+import 'package:app/features/home/presntation/views/widgets/book_rating.dart';
 import 'package:app/features/home/presntation/views/widgets/custom_book_detail_appbar.dart';
 import 'package:app/features/home/presntation/views/widgets/custom_list_view_item.dart';
 import 'package:flutter/material.dart';
@@ -18,12 +20,16 @@ class BookDetailsViewBody extends StatelessWidget {
           CustomBookDetailAppbar()
           
           ),
-
-          Padding(
-            padding:  EdgeInsets.symmetric(horizontal: width *.1),
-            child: CustomListViewItem(),
-          ),
-
+          CustomListViewItem(),
+          const SizedBox(height: 35,),
+            Text('The Jungle Book',style: Styles.textstyle30.copyWith(
+              fontWeight: FontWeight.bold,
+            ),),
+            const SizedBox(height: 5,),
+            Text('Rudyard Kipling',style: Styles.textstyle18.copyWith(
+            
+            ),),
+            BookRating(),
 
       
         ],
