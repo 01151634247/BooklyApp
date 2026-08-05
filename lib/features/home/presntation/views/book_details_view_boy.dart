@@ -4,6 +4,7 @@ import 'package:app/features/home/presntation/views/widgets/book_rating.dart';
 import 'package:app/features/home/presntation/views/widgets/books_action.dart';
 import 'package:app/features/home/presntation/views/widgets/custom_book_detail_appbar.dart';
 import 'package:app/features/home/presntation/views/widgets/custom_list_view_item.dart';
+import 'package:app/features/home/presntation/views/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -39,6 +40,19 @@ class BookDetailsViewBody extends StatelessWidget {
               height: 30,
             ),
             BooksAction(),
+            const SizedBox(
+              height: 40,
+            ),
+            Align(
+              alignment: AlignmentGeometry.centerLeft,
+              child: Text('You Can also like ',style: Styles.textstyle14.copyWith(
+                fontWeight: FontWeight.w800,
+              ),),
+            ),
+          const  SizedBox(height: 15,),
+
+            SimilarBooksListView(),
+              const  SizedBox(height: 40,),
 
       
         ],
@@ -46,6 +60,4 @@ class BookDetailsViewBody extends StatelessWidget {
     );
   }
 }
-
-
 
