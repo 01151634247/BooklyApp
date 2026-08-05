@@ -1,11 +1,21 @@
 
+import 'package:app/features/home/presntation/views/widgets/custom_book_detail_appbar.dart';
 import 'package:flutter/material.dart';
 
-class BookDetailsViewBoy extends StatelessWidget {
-  const BookDetailsViewBoy({super.key});
+class BookDetailsViewBody extends StatelessWidget {
+  const BookDetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: Column(
+        children: [
+          SafeArea(child: CustomBookDetailAppbar()),
+      
+        ],
+      ),
+    );
   }
 }
+
